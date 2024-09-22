@@ -1,0 +1,101 @@
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 40px 20px; /* Added left and right padding */
+  width: 100%; /* Set width to 100% */
+  max-width: 450px; /* Limit the container's maximum width */
+  text-align: center;
+}
+
+.logo img {
+  width: 200px;
+}
+
+.welcome {
+  font-size: 40px;
+  color: #6a1b9a;
+  margin: 20px 0 10px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+.error {
+  color: red;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 17px;
+  color: #6c757d;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box; /* Ensures consistent sizing including padding */
+}
+
+.form-group .generate-otp {
+  display: block;
+  margin-top: 10px;
+  font-size: 17px;
+  color: #6a1b9a;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form-group .generate-otp:hover {
+  text-decoration: underline;
+}
+
+.form-group .mock-otp {
+  display: block;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #120356;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sign-in-btn {
+  background-color: #6a1b9a;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  width: 100%; /* Set the button width to 100% */
+  font-size: 17px;
+  cursor: pointer;
+  box-sizing: border-box; /* Ensure the button is sized correctly */
+}
+
+.sign-in-btn:hover {
+  background-color: #5e1786;
+}

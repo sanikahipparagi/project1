@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+    <title>Login</title>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="https://api.logo.com/api/v2/images?logo=logo_4f53d19a-e484-4248-ac72-4c021be9861c&format=webp&width=2000&background=transparent&fit=contain&quality=100&u=2024-09-21T18%3A24%3A16.835Z" alt="" height="120" />
+    </div>
+    <div class="welcome">
+      Hi, Welcome Back
+     </div>
+     <div class="subtitle">
+      Enter your credentials to continue
+     </div>
+     <form (ngSubmit)="onLogin()" #loginForm="ngForm">
+     <div class="form-group">
+      <label for="employeeId">
+        Employee Id
+       </label>
+       <input
+                type="text"
+                id="employeeId"
+                name="employeeId"
+                class="form-control"
+                [(ngModel)]="employeeId"
+                #employeeIdField="ngModel"
+                required/>
+                <div *ngIf="loginForm.submitted && employeeIdField.errors?.['required']" class="error">
+                  Employee ID is required.
+                </div>
+                <div *ngIf="employeeIdError" class="error">{{ employeeIdError }}</div>
+     </div>
+  
+     <!-- otp -->
+     <div class="form-group">
+      <label for="otp">OTP</label>
+              <input
+                type="text"
+                id="otp"
+                name="otp"
+                class="form-control"
+                [(ngModel)]="otp"
+                #otpField="ngModel"
+                required
+              />
+              <div *ngIf="loginForm.submitted && otpField.errors?.['required']" class="error">
+                OTP is required.
+              </div>
+            
+       <a class="generate-otp" (click)="generateOtp()">
+        Generate OTP  
+       </a>
+       <span *ngIf="mockotp" class="mock-otp"> (Mock OTP: {{ mockotp }})</span>
+      
+      
+     </div>
+     <button type="submit" class="sign-in-btn">
+      Login
+     </button>
+     <div *ngIf="loginError" class="error">{{ loginError }}</div>
+    </form>
+  
+  </div>
+</body>
+</html>
+
+
+
+
+
